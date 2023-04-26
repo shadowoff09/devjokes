@@ -15,7 +15,7 @@ export default function Home() {
   async function getJoke() {
     setLoading(true); // Show spinner
     const res = await fetch( // Fetch data from API
-      `https://backend-omega-seven.vercel.app/api/getjoke`,
+      `/api`,
       { next: { revalidate: 0 } }
     ); 
     const data = await res.json(); // Convert to JSON
